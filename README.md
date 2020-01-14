@@ -1,6 +1,6 @@
 # rust-wallpaper
 
-Cross-platform wallpaper changer for macOS and Windows.
+Cross-platform wallpaper changer for macOS and Windows.  
 This application is the practice project of macOS / Windows (and others?) Platform Dependent Programming in Rust.
 
 ## Usage
