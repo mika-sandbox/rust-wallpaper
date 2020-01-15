@@ -13,11 +13,7 @@ use winapi::{
         winerror::HRESULT,
         wtypesbase::CLSCTX_LOCAL_SERVER,
     },
-    um::{
-        combaseapi::CoCreateInstance,
-        unknwnbase::LPUNKNOWN,
-        winnt::{LPCWSTR, LPWSTR},
-    },
+    um::{combaseapi::CoCreateInstance, unknwnbase::LPUNKNOWN, winnt::LPCWSTR},
 };
 
 // C2CF3110-460E-4fc1-B9D0-8A1C0C9CC4BD
@@ -89,8 +85,8 @@ pub trait IDesktopWallpaper: IUnknown {
     // see um/ShObjIdl_core.h
 
     fn set_wallpaper(&self, monitor_id: LPCWSTR, wallpaper: LPCWSTR) -> HRESULT;
-    fn get_wallpaper(&self, monitor_id: LPCWSTR, wallpaper: LPWSTR) -> HRESULT;
-    fn get_monitor_device_path_at(&self, monitor_index: u32, monitor_id: LPWSTR) -> HRESULT;
+    fn get_wallpaper(&self);
+    fn get_monitor_device_path_at(&self);
     fn get_monitor_device_path_count(&self);
     fn get_monitor_rect(&self);
     fn set_background_color(&self);
